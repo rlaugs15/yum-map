@@ -1,5 +1,5 @@
 import KakaoMap from "@/components/KakaoMap";
-import NearbyEats from "@/features/home/NearbyEats";
+import NearbyEats from "@/features/home/NearbyEats/NearbyEats";
 
 export default function Home() {
   return (
