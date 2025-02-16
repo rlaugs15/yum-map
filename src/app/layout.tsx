@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Yum Map",
@@ -13,6 +14,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <Script
+          src={`https://dapi.kakao.com/v2/maps/sdk.js?appkey=${process.env.NEXT_PUBLIC_KAKAO_MAP_KEY}&autoload=false`}
+          strategy="beforeInteractive"
+        />
+      </head>
       <body className="flex flex-col items-center h-screen web:min-w-[1440px] mobile:w-screen bg-slate-100">
         <main className="w-full px-4">{children}</main>
       </body>
