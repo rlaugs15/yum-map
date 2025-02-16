@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import MainHeader from "@/components/headers/MainHeader";
 import Script from "next/script";
 
 export const metadata: Metadata = {
@@ -21,6 +22,7 @@ export default function RootLayout({
         />
       </head>
       <body className="flex flex-col items-center h-screen web:min-w-[1440px] mobile:w-screen bg-slate-100">
+        <MainHeader />
         <main className="w-full px-4">{children}</main>
       </body>
     </html>
