@@ -1,3 +1,4 @@
+"use client";
 import TapNavigation from "./TapNavigation";
 
 export default function MainHeader() {
